@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Doe - Creative Portfolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="particles-js"></div> 
+
+    <main class="content">
+
+        <header class="hero">
+            <img src="1.jpg" alt="Your Profile Picture" class="profile-pic reveal">
+            <h1 class="reveal">Rishad Cholakkal</h1>
+            <p class="subtitle reveal">I am a <span class="typing-effect"></span></p>
+
+            <div class="social-links reveal">
+                <a href="https://github.com/RISHADCHOLAKKAL" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/rishad-cm-bab69935b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://x.com/RISHAD_C_M?t=IQE7GM-FbF45G-fbZYfZiQ&s=09" aria-label="Twitter"><i class="fab fa-x"></i></a>
+                <a href="https://www.instagram.com/_rishad_cholakkal_?igsh=bnRremJpb3Bpemx6" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            
+            <a href="https://rishadcholakkal.github.io/login-page/" class="main-website-btn reveal">
+                <i class="fas fa-globe"></i> Visit My Main Website
+            </a>
+        </header>
+
+        <section id="about" class="window reveal">
+            <h2><i class="fas fa-user-circle"></i> About Me</h2>
+            <p>
+                Hello! I'm a passionate and creative developer with a love for building beautiful, intuitive, and dynamic web experiences. My journey in tech started with a simple "LEICA" and has since evolved into a full-blown passion for crafting elegant solutions to complex problems.
+            </p>
+            <p>
+                When I'm not coding, you can find me exploring the latest tech trends, contributing to open-source projects, or enjoying a cup of coffee.
+            </p>
+        </section>
+
+        <section id="skills" class="window reveal">
+            <h2><i class="fas fa-cogs"></i> My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item"><i class="fab fa-html5"></i><span>HTML5</span></div>
+                <div class="skill-item"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+                <div class="skill-item"><i class="fab fa-js-square"></i><span>JavaScript</span></div>
+                <div class="skill-item"><i class="fab fa-react"></i><span>React</span></div>
+                <div class="skill-item"><i class="fab fa-c"></i><span>C</span></div>
+                <div class="skill-item"><i class="fab fa-python"></i><span>Python</span></div>
+                <div class="skill-item"><i class="fas fa-database"></i><span>SQL</span></div>
+                <div class="skill-item"><i class="fab fa-figma"></i><span>Figma</span></div>
+            </div>
+        </section>
+
+        <section id="projects" class="reveal">
+            <h2 class="section-title"><i class="fas fa-project-diagram"></i> My Upcoming Projects</h2>
+            <div class="project-grid">
+
+                <div class="project-card">
+                    <img src="2.jpg" alt="Project One Screenshot">
+                    <div class="project-info">
+                        <h3>E-Commerce Platform</h3>
+                        <p>A full-stack e-commerce website built with the MERN stack, featuring product search, cart functionality, and Stripe integration.</p>
+                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="3.jpg" alt="Project Two Screenshot">
+                    <div class="project-info">
+                        <h3>Task Management App</h3>
+                        <p>A sleek and responsive task manager built with React and Firebase, featuring real-time database updates and user authentication.</p>
+                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="4.jpg" alt="Project Three Screenshot">
+                    <div class="project-info">
+                        <h3>Portfolio Template</h3>
+                        <p>A dynamic and animated portfolio template (this one!) designed to be easily customizable for creatives and developers.</p>
+                        <a href="#" class="project-link">View on GitHub <i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+<div>
+     
+    <br>
+    
+</div>
+        <footer id="contact" class="window reveal">
+            <h2><i class="fas fa-envelope-open-text"></i> Get In Touch</h2>
+            <p>
+                I'm always open to discussing new projects, creative ideas, or opportunities to be part of an ambitious vision. Feel free to reach out!
+            </p>
+            <a href="mailto:rishadcm18@gmil.com" class="contact-btn">Say Hello</a>
+        </footer>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.4.0/tsparticles.bundle.min.js"></script>
+    
+   
+    <script src="script.js"></script>
+    
+    <canvas id="particle-canvas"></canvas>
+
+<script>
+    const canvas = document.getElementById('particle-canvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    let particlesArray;
+    const mouse = { x: null, y: null, radius: (canvas.height / 100) * (canvas.width / 100) };
+
+    window.addEventListener('mousemove', e => { mouse.x = e.x; mouse.y = e.y; });
+
+    class Particle {
+        constructor(x, y, dx, dy, size, color) {
+            this.x = x; this.y = y; this.dx = dx; this.dy = dy; this.size = size; this.color = color;
+        }
+        draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+            ctx.fillStyle = 'rgba(140, 120, 212, 0.2)';
+            ctx.fill();
+        }
+        update() {
+            if (this.x > canvas.width || this.x < 0) this.dx = -this.dx;
+            if (this.y > canvas.height || this.y < 0) this.dy = -this.dy;
+            let dx = mouse.x - this.x, dy = mouse.y - this.y;
+            let dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < mouse.radius + this.size) {
+                if (mouse.x < this.x && this.x < canvas.width - this.size * 10) this.x += 5;
+                if (mouse.x > this.x && this.x > this.size * 10) this.x -= 5;
+                if (mouse.y < this.y && this.y < canvas.height - this.size * 10) this.y += 5;
+                if (mouse.y > this.y && this.y > this.size * 10) this.y -= 5;
+            }
+            this.x += this.dx;
+            this.y += this.dy;
+            this.draw();
+        }
+    }
+
+    function init() {
+        particlesArray = [];
+        let num = (canvas.height * canvas.width) / 9000;
+        for (let i = 0; i < num; i++) {
+            let size = (Math.random() * 2) + 1;
+            let x = Math.random() * (innerWidth - size * 4) + size * 2;
+            let y = Math.random() * (innerHeight - size * 4) + size * 2;
+            let dx = (Math.random() * 0.4) - 0.2;
+            let dy = (Math.random() * 0.4) - 0.2;
+            particlesArray.push(new Particle(x, y, dx, dy, size, 'rgba(140, 120, 212, 0.5)'));
+        }
+    }
+
+    function connect() {
+        for (let a = 0; a < particlesArray.length; a++) {
+            for (let b = a; b < particlesArray.length; b++) {
+                let dist = ((particlesArray[a].x - particlesArray[b].x) ** 2) +
+                           ((particlesArray[a].y - particlesArray[b].y) ** 2);
+                if (dist < (canvas.width / 7) * (canvas.height / 7)) {
+                    let opacity = 1 - (dist / 20000);
+                    ctx.strokeStyle = `rgba(140, 120, 212, ${opacity * 0.3})`;
+                    ctx.lineWidth = 1;
+                    ctx.beginPath();
+                    ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
+                    ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
+                    ctx.stroke();
+                }
+            }
+        }
+    }
+
+    function animate() {
+        requestAnimationFrame(animate);
+        ctx.clearRect(0, 0, innerWidth, innerHeight);
+        particlesArray.forEach(p => p.update());
+        connect();
+    }
+
+    window.addEventListener('resize', () => {
+        canvas.width = innerWidth;
+        canvas.height = innerHeight;
+        mouse.radius = (canvas.height / 100) * (canvas.width / 100);
+        init();
+    });
+    window.addEventListener('mouseout', () => { mouse.x = undefined; mouse.y = undefined; });
+
+    init();
+    animate();
+</script>
+
+<style>
+    body {
+        margin: 0;
+        /* Removed overflow: hidden so page can scroll */
+    }
+    #particle-canvas {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        z-index: -1;
+        pointer-events: none; /* Allow scroll and clicks through */
+    }
+</style>
+
+</body>
+</html>
