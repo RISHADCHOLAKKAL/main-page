@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Riahad cholakkal -  Portfolio</title>
+    <title>rishad cholakkal Portfolio</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,13 +52,40 @@
                 <div class="skill-item"><i class="fab fa-html5"></i><span>HTML5</span></div>
                 <div class="skill-item"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
                 <div class="skill-item"><i class="fab fa-js-square"></i><span>JavaScript</span></div>
-                <div class="skill-item"><i class="fab fa-react"></i><span>React</span></div>
+                <div class="skill-item"><i class="fab fa-drupal"></i><span>Drupal</span></div>
                 <div class="skill-item"><i class="fab fa-c"></i><span>C</span></div>
                 <div class="skill-item"><i class="fab fa-python"></i><span>Python</span></div>
                 <div class="skill-item"><i class="fas fa-database"></i><span>SQL</span></div>
                 <div class="skill-item"><i class="fab fa-figma"></i><span>Figma</span></div>
             </div>
         </section>
+
+        <div>
+    <section id="projects" class="reveal">
+            <h2 class="section-title"><i class="fas fa-project-diagram"></i> My Projects</h2>
+            <div class="project-grid">
+
+
+                <div class="project-card">
+                    <img src="6.jpg" alt="Project one Screenshot">
+                    <div class="project-info">
+                        <h3>Image Resizer</h3>
+                        <p>A lightweight tool for resizing, compressing, and converting images into multiple formats, optimized for speed and quality.</p>
+                        <a href="https://rishadcholakkal.github.io/image-resizer/" class="project-link"> View Project<i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="project-card">
+                    <img src="5.jpg" alt="Project Two Screenshot">
+                    <div class="project-info">
+                        <h3>Image Encryption</h3>
+                        <p>A secure system that protects images with password-based 128-bit encryption, ensuring privacy and preventing unauthorized access.</p>
+                         <a href="https://rishadcholakkal.github.io/image-encryption/" class="project-link"> View Project<i class="fas fa-arrow-right"></i></a>
+                    
+                        </div>
+                    </div>
+                </div>
 
         <section id="projects" class="reveal">
             <h2 class="section-title"><i class="fas fa-project-diagram"></i> My Upcoming Projects</h2>
@@ -93,7 +120,7 @@
 
             </div>
         </section>
-<div>
+
      
     <br>
     
@@ -132,7 +159,7 @@
         draw() {
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-            ctx.fillStyle = 'rgba(140, 120, 212, 0.2)';
+            ctx.fillStyle = 'rgba(140, 120, 212, 0.4)';
             ctx.fill();
         }
         update() {
@@ -172,7 +199,7 @@
                            ((particlesArray[a].y - particlesArray[b].y) ** 2);
                 if (dist < (canvas.width / 7) * (canvas.height / 7)) {
                     let opacity = 1 - (dist / 20000);
-                    ctx.strokeStyle = `rgba(140, 120, 212, ${opacity * 0.3})`;
+                    ctx.strokeStyle = `rgba(140, 120, 312, ${opacity * 0.4})`;
                     ctx.lineWidth = 1;
                     ctx.beginPath();
                     ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
@@ -217,5 +244,4 @@
 </style>
 
 </body>
-
 </html>
